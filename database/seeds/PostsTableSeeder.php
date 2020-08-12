@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Factory;
-
+use Carbon\Carbon;
 
 class PostsTableSeeder extends Seeder
 {
@@ -19,11 +19,12 @@ class PostsTableSeeder extends Seeder
         //generate 10 dummy data
         $posts = [];
         $faker = Factory::create();
+        $date = Carbon::create(2020, 8, 12, 23);
 
         for($i = 1; $i <= 10; $i++){
 
         	$image = "Post_Image_" . rand(1,5) . ".jpg";
-        	$date = date("Y-m-d H:i:s", strtotime("2020-08-09 17:00:00 +{$i} days"));
+        	$date = $date->addDays($i);
 
         	$posts[] = [
         		'author_id' => rand(1, 3),
@@ -34,6 +35,7 @@ class PostsTableSeeder extends Seeder
         		'image' => rand(0,1) == 1 ? $image : NULL,
         		'created_at' => $date,
         		'updated_at' => $date,
+                'published_at' => rand(1,0) == 0 ? NULL : $date->addDays($i + rand(4, 10)),
         	];
         }
 
