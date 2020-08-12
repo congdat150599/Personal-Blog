@@ -29,6 +29,7 @@
     <link href="/css/shared.css" type="text/css" rel="stylesheet">
     <link href="/css/post.css" type="text/css" rel="stylesheet">
     <link href="/css/footer.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
 <body>
 	<!-- header -->
@@ -38,7 +39,8 @@
 		</div>
 		<i class="fa fa-bars menu-toggle"></i>
 		<ul class="nav">
-			<li><a href="#">Home</a></li>
+			<li><a href="http://localhost:8000/">Home</a></li>
+			<li><a href="http://localhost:8000/blog/blog">Blog</a></li>
 			<li><a href="#">About</a></li>	
 			<li class="account-toggle">
 				<a href="#">
@@ -88,6 +90,8 @@
 </script>
 
 <script src="/js/script.js"></script>
+<script src="../../js/script.js"></script>
+<script src="../../../public/js/script.js"></script>
 <script src="/js/parallax.min.js"></script>
 <script>
   var rellax = new Rellax('.rellax');

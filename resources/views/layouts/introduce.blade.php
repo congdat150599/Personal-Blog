@@ -4,12 +4,12 @@
  data-aos-duration="2000">
     <div class="sign">
     	<h3 data-aos="zoom-in" data-aos-delay="200">
-			<span class="M fast-flicker">M</span>
-			<span class="E">e</span>
-			<span class="m">m</span>
-			<span class="O">o</span>
-			<span class="R flicker">r</span>
-			<span class="Y">y</span>
+			<span class="M fast-flicker">T</span>
+			<span class="E">r</span>
+			<span class="m">a</span>
+			<span class="O flicker">V</span>
+			<span class="R">e</span>
+			<span class="Y">l</span>
 	    </h3>
     </div>
 	<div class="shape rellax">
