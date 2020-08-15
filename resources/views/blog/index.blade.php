@@ -32,12 +32,12 @@
 				@foreach($posts as $post)
 				<div class="container">
 					@if($post->image_url)
-					<a href="#"><img src="{{$post->image_url}}" alt="" class="content-post-image"></a>
+					<a href="{{route('home.show', $post->id)}}"><img src="{{$post->image_url}}" alt="" class="content-post-image"></a>
 					@endif
 					<div class="content-post-main">
-						<a href="#"><h4 class="content-post-title">{{Str::words($post->title, $words = 5, $end = '...')}}</h4></a>
+						<a href="{{route('home.show', $post->slug)}}"><h4 class="content-post-title">{{Str::words($post->title, $words = 5, $end = '...')}}</h4></a>
 						<i class="fa fa-user content-post-user">{{$post->author->name}}</i>
-						<i class="fas fa-calendar content-post-calendar">{{$post->created_at}}</i>
+						<i class="fas fa-calendar content-post-calendar">{{$post->date}}</i>
 						<p class="content-post">{{Str::words($post->excerpt, $words = 10, $end = '...')}}</p>
 					</div>
 			    </div>

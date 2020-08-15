@@ -39,8 +39,8 @@
 		</div>
 		<i class="fa fa-bars menu-toggle"></i>
 		<ul class="nav">
-			<li><a href="http://localhost:8000/">Home</a></li>
-			<li><a href="http://localhost:8000/blog/blog">Blog</a></li>
+			<li><a href="{{route('home')}}">Home</a></li>
+			<li><a href="{{route('blog')}}">Blog</a></li>
 			<li><a href="#">About</a></li>	
 			<li class="account-toggle">
 				<a href="#">

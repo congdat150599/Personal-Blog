@@ -40,20 +40,30 @@
 				border-top:.5px solid #111;
 				.author{
 					margin:.7rem 1.5rem 1rem 1rem;
+					font-size: .8rem;
+					span{
+						margin-left:.5rem;
+					}
 				}
 				.calendar{
-					
 					margin:.7rem 1.5rem 1rem 1rem;
+					font-size: .8rem;
+					span{
+						margin-left:.5rem;
+					}
 				}
 				.tag-blog{
 					margin:.7rem 1.5rem 1rem 1rem;
+					font-size: .8rem;
 				}
 				.comment-blog{
 					margin:.7rem 1.5rem 1rem 1rem;
+					font-size: .8rem;
 				}
 				.read-more{
 					display: flex;
-					margin:.7rem 2rem 1rem 23rem;
+					margin:.7rem 2rem 1rem 27rem;
+					font-size: .8rem;
 					p{
 						width: 127px;
 						height: 10px;

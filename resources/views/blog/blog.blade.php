@@ -11,7 +11,7 @@
 			</div>
 			<div class="up-block-blog">
 				<div class="title-blog">
-					<h1>{{$post->title}}</h1>
+					<a href="{{route('home.show', $post->slug)}}"><h1>{{$post->title}}</h1></a>
 				</div>
 				<div class="excerpt-blog">
 					<p>{{$post->excerpt}}</p>
@@ -19,16 +19,16 @@
 			</div>
 			<div class="down-block-blog">
 				<div class="author">
-					<i class="fa fa-user content-post-user">{{$post->author->name}}</i>
+					<i class="fa fa-user content-post-user"><span>{{$post->author->name}}</span></i>
 				</div>
-				<div class="calendar">
-					<i class="fas fa-calendar content-post-calendar">{{$post->date}}</i>
+				<div class="calendar" style="flex-shrink: 0">
+					<i class="fas fa-calendar content-post-calendar"><span>{{$post->date}}</span></i>
 				</div>
 				<div class="tag-blog">
 					<i class="fas fa-tag">Blog</i>
 				</div>
 				<div class="comment-blog">
-					<i class="fas fa-comment">Comment</i>
+					<a href="#"><i class="fas fa-comment">Comment</i></a>
 				</div>
 				<div class="read-more">
 					<p>Continue Reading</p>
