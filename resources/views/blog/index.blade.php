@@ -38,7 +38,7 @@
 						<a href="{{route('home.show', $post->slug)}}"><h4 class="content-post-title">{{Str::words($post->title, $words = 5, $end = '...')}}</h4></a>
 						<i class="fa fa-user content-post-user">{{$post->author->name}}</i>
 						<i class="fas fa-calendar content-post-calendar">{{$post->date}}</i>
-						<p class="content-post">{{Str::words($post->excerpt, $words = 10, $end = '...')}}</p>
+						<p class="content-post">{!! Str::words($post->excerpt_html, $words = 10, $end = '...') !!}</p>
 					</div>
 			    </div>
 			    @endforeach

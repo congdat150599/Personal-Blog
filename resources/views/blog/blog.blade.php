@@ -14,7 +14,7 @@
 					<a href="{{route('home.show', $post->slug)}}"><h1>{{$post->title}}</h1></a>
 				</div>
 				<div class="excerpt-blog">
-					<p>{{$post->excerpt}}</p>
+					{!! $post->excerpt_html !!}
 				</div>
 			</div>
 			<div class="down-block-blog">

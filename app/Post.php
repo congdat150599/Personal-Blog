@@ -43,6 +43,10 @@ class Post extends Model
     }
 
     public function getBodyHtmlAttribute($value){
-        return Markdown::convertToHtml($this->body);
+        return $this->body ? Markdown::convertToHtml($this->body) : NULL;
+    }
+
+    public function getExcerptHtmlAttribute($value){
+        return $this->excerpt ? Markdown::convertToHtml($this->excerpt) : NULL;
     }
 }
