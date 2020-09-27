@@ -8,6 +8,16 @@
     # LAYOUTS
 
 \*******************************/
+/*******************************\
+
+    # SIZINGS
+
+\*******************************/
+/*******************************\
+
+    # RESPONSIVE
+
+\*******************************/
 .footer {
   position: relative;
   display: flex;
@@ -19,6 +29,7 @@
   width: 100%;
   height: auto;
   max-height: 60vh;
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.8);
   background-color: #192841; }
   .footer * {
@@ -90,5 +101,7 @@
       @media (max-width: 767px) {
         .footer .bottom .copyrights {
           display: block; } }
+    .footer .bottom .move_up {
+      cursor: pointer; }
 
 /*# sourceMappingURL=footer.css.map */

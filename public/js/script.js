@@ -1,53 +1,30 @@
 $(document).ready(function(){
-	//Navbar And Introduce
-	$('.menu-toggle').on('click', function(){
-		$('.nav').toggleClass('showing');
-		$('.introduce').toggleClass('showingdown');
-	});
-	$('.account-toggle').on('click', function() {
-		$('.account-toggle ul').toggleClass('showing');
-	});
-
-	$('.account-toggle').hover(function(){
-		$('.introduce').toggleClass('showingdown2');
-	});
-    // Post Slider
+	
 	$('.post-wrapper').slick({
-	  slidesToShow: 4,
-	  slidesToScroll: 4,
-	  autoplay: true,
-	  autoplaySpeed: 2000,
-	  prevArrow: $('.prev'),
-	  nextArrow: $('.next'),
-	  responsive: [
-      {
-	      breakpoint: 1040,
-	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 3,
-	        infinite: true,
-	        dots: true
-	      }
-      },
-	  {
-	      breakpoint: 750,
-	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 2
-	      }
-      },
-	  {
-	      breakpoint: 480,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
+  centerMode: true,
+  centerPadding: '360px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
       }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-      ]
-	});
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 
 	//Tabbar 
 
@@ -55,6 +32,40 @@ $(document).ready(function(){
 		$('.content .content-left .tabbar-control .line-control .trending').toggleClass('.line-control-color');
 	});
 	//End Tabbar
-	
+
+		//click to scroll top
+ 	$('.move_up span').click(function(){
+ 		$('html,body').animate({
+ 			scrollTop:0
+ 		},1000);
+ 	})
+ 	var x = $('html,body');
+
+ 	// var move = document.querySelector(".move_up");
+
+ 	// move.click(function(){
+ 	// 	document.body.animate({
+ 	// 		scrollTop:0
+ 	// 	}, 1000);
+ 	// });
+
+
+ 	$("#key").on("keyup", function(){
+ 		var value = $(this).val().toLowerCase();
+ 		$("#myKey .theme").filter(function(){
+ 			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+ 		});
+ 	});
+
+
+
+
+
+  
+ 	
 });
 
+
+
+
+ 
