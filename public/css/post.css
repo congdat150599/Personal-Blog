@@ -32,7 +32,8 @@
   .top-hero .post-thumb {
     width: 100%;
     height: 55rem;
-    z-index: 1; }
+    z-index: 1;
+    opacity: .5; }
     .top-hero .post-thumb img {
       width: 100%;
       height: 100%; }
@@ -44,14 +45,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 1.5rem; }
+    padding-right: 1.5rem;
+    color: black; }
     .top-hero .text .title {
       display: block;
       padding-bottom: 1rem;
       font-size: 3rem;
       font-weight: bold;
       text-align: left;
-      color: white; }
+      color: black; }
     .top-hero .text .description {
       position: relative;
       margin-left: -19rem;
@@ -61,27 +63,36 @@
         font-size: 1.5rem;
         font-weight: bold;
         display: flex; }
-        .top-hero .text .description .details li {
-          color: white; }
         .top-hero .text .description .details .author {
           padding-bottom: 0.5rem;
-          font-style: italic;
-          color: white; }
+          font-style: italic; }
         .top-hero .text .description .details .date {
-          font-style: italic;
-          color: white; }
-        .top-hero .text .description .details span {
-          color: white; }
-          .top-hero .text .description .details span i {
-            color: white; }
+          font-style: italic; }
+
+.hr_line {
+  width: 100%;
+  height: 50px;
+  margin-top: 5rem;
+  position: relative; }
+  .hr_line .stars {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40%; }
+    .hr_line .stars i {
+      margin-left: 2rem;
+      color: gold; }
 
 .post-content {
+  background-color: white;
   position: relative;
   padding: 100px 250px;
   width: 80%;
   height: auto;
   margin-left: 10%;
-  margin-top: 6rem;
   padding-top: 2rem; }
   .post-content * {
     font-size: 1.2rem; }
@@ -105,6 +116,9 @@
     margin-right: -20rem;
     padding-top: 2rem;
     padding-bottom: 2rem; }
+  .post-content a {
+    font-size: 2rem;
+    text-decoration: underline; }
   .post-content p {
     display: block;
     font-size: 1.8rem;
@@ -137,15 +151,16 @@
     font-weight: bold; }
   .post-content img {
     max-width: 100%;
-    width: auto;
+    width: 800px;
     max-height: 80rem;
     height: auto;
     text-align: center;
-    align-items: center; }
+    align-items: center;
+    margin-left: 13%; }
 
 .post-info-author {
   width: 100%;
-  height: 150px;
+  height: 300px;
   margin-bottom: 25rem; }
   .post-info-author .info-author {
     width: 40%;
@@ -157,13 +172,17 @@
     margin-top: 2rem;
     border-radius: 2rem;
     box-shadow: -1px 0px 5px 5px #E0E1E2; }
-    .post-info-author .info-author .picture-author img {
+    .post-info-author .info-author .picture-author {
       border-radius: 100%;
       width: 10rem;
       height: 10rem;
-      margin-left: 3%;
-      margin-top: -11rem;
+      margin-left: 2%;
+      margin-top: -6rem;
       box-shadow: -1px 0px 5px 5px #E0E1E2; }
+      .post-info-author .info-author .picture-author img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%; }
     .post-info-author .info-author .info {
       width: 70%;
       height: 100%;
@@ -190,7 +209,7 @@
         height: auto; }
         .post-info-author .info-author .info .description p {
           font-size: 2rem;
-          margin: 1rem; }
+          margin: 2rem; }
 
 .comment {
   position: relative;
@@ -330,8 +349,8 @@
   padding-top: 2rem; }
   .show-comments .post-comment {
     width: 72rem;
-    height: 20rem;
-    max-height: auto;
+    height: auto;
+    max-height: 40rem;
     display: flex;
     margin-bottom: 2rem;
     padding-bottom: 2rem; }

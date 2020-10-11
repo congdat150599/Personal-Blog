@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	
 	<title>My Blog</title>
 	<!--<link rel="stylesheet" href="style.css">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{URL::asset('img/favicon.png')}}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -33,56 +35,40 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- 	custom styling -->
-    <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-    <link href="/css/footer.css" type="text/css" rel="stylesheet">
-    <link href="/css/reset.css" type="text/css" rel="stylesheet">
-    <link href="/css/shared.css" type="text/css" rel="stylesheet">
-    <link href="/css/post.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL::asset('css/style.css')}}" type="text/css"> <!-- style main -->
+    <link rel="stylesheet" href="/css/footer.css" type="text/css" > <!-- footer  -->
+    <link rel="stylesheet" href="/css/reset.css" type="text/css" >
+    <!-- <link rel="stylesheet" href="/css/shared.css" type="text/css" > -->
+    <link rel="stylesheet" href="/css/post.css" type="text/css" >  <!-- content of post --> <!-- page content -->
    <!--  <link rel="stylesheet" href="{{asset('css/header.css')}}"> -->
-    <link rel="stylesheet" href="/css/blog.css">
-    <link rel="stylesheet" href="{{URL::asset('css/category_intro.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('css/featured.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('css/mobile.css')}}">
+    <link rel="stylesheet" href="/css/blog.css" type="text/css"> <!-- page blog -->
+
+    <link rel="stylesheet" href="{{URL::asset('css/poster.css')}}" type="text/css"> <!-- category & poster -->
+
+    <link rel="stylesheet" href="{{URL::asset('css/featured.css')}}" type="text/css"> <!-- all_content -->
+    <link rel="stylesheet" href="{{URL::asset('css/new_post.css')}}" type="text/css"> <!-- new post - index page -->
+    <link rel="stylesheet" href="{{URL::asset('css/banner.css')}}" type="text/css">   <!-- banner - index -->
+    <link rel="stylesheet" href="{{URL::asset('css/book_library.css')}}" type="text/css"> <!-- book_library - index page -->
+    <!-- <link rel="stylesheet" href="{{URL::asset('css/mobile.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{URL::asset('css/slide.css')}}"> -->
 </head>
 <body>
 	<!--GSAP ANimation Library-->
     <script src="js/gsap/gsap.min.js"></script>
-	<!-- header -->
-    <header>
-		<div class="logo">
-			<a href="{{route('index_home')}}"><h1 class="logo-text"><span>Travel</span>Blog</h1></a>
-		</div>
-		<i class="fa fa-bars menu-toggle"></i>
-		<ul class="nav-menu">
-			<li><a href="{{route('index_home')}}">Home</a></li>
-			<li><a href="{{route('blog')}}">Blog</a></li>
-			<li><a href="#">About</a></li>	
-			<!-- <li class="account-toggle">
-				<a href="#"><i class="fa fa-user"></i>Cong Dat</a>
-	            <ul class="dropdown">
-	                <li><a href="#">Dashboard</a></li>
-	            </ul>
-			</li> -->
-		</ul>
-		<div class="social text-gray">
-			<a href="#"><i class="fab fa-facebook-f soc-1"></i></a>
-			<a href="#"><i class="fab fa-instagram soc-2"></i></a>
-			<a href="#"><i class="fab fa-twitter soc-3"></i></a>
-			<a href="#"><i class="fab fa-youtube soc-4"></i></a>
-		</div>
-	</header>
-	<!-- End header -->
+    <!-- menu -->
+    @include('layouts.menu')
+	<!-- End menu -->
 	
-
+    
 	@yield('content')
 
 	<!-- zalo -->
-	<div class="zalo-chat-widget" data-oaid="427529605932292622" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+	<!-- <div class="zalo-chat-widget" data-oaid="427529605932292622" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
 
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
 	<!-- end zalo -->
 	<!-- scroll to top -->
-	<button class="scrollTop" onclick="topFunction()" id="btn-Top">Top</button>
+	<!-- <button class="scrollTop" onclick="topFunction()" id="btn-Top">Top</button>
 	<script>
 		var myTop = document.getElementById('btn-Top');
 		  windown.onscroll = function(){scrollFunction()};
@@ -99,7 +85,7 @@
 		    document.body.scrollTop = 0;
 		    document.documentElement.scrollTop = 0;
 		  }
-	</script>
+	</script> -->
 	<!-- end scroll to top -->
     <!-- footer -->
 	<footer class="footer">

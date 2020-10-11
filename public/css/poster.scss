@@ -1,25 +1,21 @@
-// @include('<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">');
 .page-wrapper{
 	width: 100%;
 	height: 300px;
-	// border:1px solid red;
 	align-items: center;
 	.page_content{
 		width: 81%;
 		height: 75%;
 		border:.1px solid #ffffff;
-		margin:2% 10%;
+		margin:4% 10%;
 		border-radius: 1rem;
 		box-shadow: -1px 1px 5px 5px #E0E1E2;
 		.content{
 			width: 94%;
 			height: 67%;
-			// border:1px solid green;
 			margin:3% 4%;
 			display: flex;
-			
+			border:none;
 			.items{
-				// border:1px solid orange;
 				width: 215px;
 				height: 144px;
 				margin-right: 2rem;
@@ -27,6 +23,7 @@
 				cursor: pointer;
 				box-shadow: -1px 1px 5px 5px #E0E1E2;
 				position: relative;
+				text-align: center;
 				img{
 					width: 100%;
 					height: 100%;
@@ -34,16 +31,18 @@
 					z-index: 1;
 				}
 				.letter{
+					width: 100%;
+					height: 100%;
+					border-radius: 1rem;
 					position: absolute;
 					z-index: 3;
-					top: 4rem;
-					left: 5rem;
-					right: 5rem;
+					top: 0rem;
 					font-family: 'Hanalei', cursive;
 					font-size: 2.5rem;
 					color: #ffffff;
 					text-align: center;
 					align-items: center;
+					padding-top: 5rem;
 					a:hover{
 						color: #fcba03 !important;
 					}

@@ -20,12 +20,21 @@
     </div>
 </div>
 
+<div class="hr_line">
+    <div class="stars">
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+    </div>
+    
+</div>
+
 <section class="post-content" id="post-comments">
     {!! $post->body_html !!}
 </section>
-<div class="line">
-    
-</div>
+
 <section class="comment">
     <!-- @if(session('message'))
        <div class="alert alert-info">

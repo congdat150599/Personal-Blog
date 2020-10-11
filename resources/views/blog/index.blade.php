@@ -1,22 +1,14 @@
 @extends('layouts.main')
 @section('content')
     <!-- Introduce -->
-    @include('layouts.introduce')
+    @include('layouts.banner')
     <!-- End Introduce -->
+ 
 
+    @include('layouts.poster')
 	<!-- Post Content -->
 	<section class="content content-areas">
 		<section class="content-left articles-block">
-			<!-- <div class="tabbar-control">
-				@foreach($categories as $category_index)
-					<a href="{{route('category', $category_index->title)}}" onclick="loadCate()">
-						<span class="line-control">
-							<div class="trending" >{{$category_index->title}}</div>
-						</span>
-					</a>
-				@endforeach
-			</div> -->
-			
 			<div class="container-main">
 				@foreach($popularPosts as $post)
 				<div class="container">
@@ -47,14 +39,13 @@
 	<!-- End Post Content -->
 
 	<!-- Page Wrapper -->
-	 @include('layouts.category_intro')
+	 
 	<!-- End Page Wrapper -->
 	<!-- Featured -->
 
+	@include('layouts.book_library')
+
 	<section class="featured">
-		<!-- <div class="featured-title">
-			<h4>Featured</h4>
-		</div> -->
 		<div class="container h-100" data-aos="zoom-in" data-aos-delay="200">
 	      <div class="d-flex justify-content-center h-100 ">
 	        <div id="searchbar" class="searchbar">

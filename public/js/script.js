@@ -56,16 +56,29 @@ $(document).ready(function(){
  			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
  		});
  	});
-
-
-
-
-
-  
  	
 });
 
 
 
+//scroll navbar
 
+function navbarScroll(){
+  window.onscroll = function(){myFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky");
+      navbar.style.backgroundColor = "#D5D1D1";
+    } else {
+      navbar.classList.remove("sticky");
+      navbar.style.backgroundColor = "#ffffff";
+    }
+  }
+  myFunction();
+}
+navbarScroll();
  

@@ -93,9 +93,9 @@
 		justify-content: center;
 		margin-left: 3.2em;
 		padding-top: 3rem;
-		background-image: url('../images/featured_bg.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
+		// background-image: url('../images/featured_bg.jpg');
+		// background-repeat: no-repeat;
+		// background-size: cover;
 		opacity: 0.3;
 		.theme{
 			// border:2px solid orange;
@@ -130,7 +130,7 @@
 				left: 24px;
 				z-index: 110;
 				background: #fff;
-				box-shadow: -1px 0px 5px 5px #B6F4FD;
+				box-shadow: 0px 0px 2px 2px #B6F4FD;
 				border-radius: .5rem;
 				.theme-title:hover{
 					color: #fcba03;
